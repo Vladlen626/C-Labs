@@ -4,6 +4,8 @@
 #include <iomanip>;
 using namespace std;
 
+
+
 class Abonent {
 public:
 	int id;
@@ -17,6 +19,7 @@ public:
 		phoneNumber = _phoneNumber;
 	}
 	~Abonent() {};
+
 	
 	friend class Notebook;
 };
@@ -24,18 +27,18 @@ public:
 class Notebook {
 
 public:
-	Abonent change(Abonent _ob, string _newPhoneNumber) {
-		_ob.phoneNumber = _newPhoneNumber;
-		return _ob;
+
+	void change(Abonent& ob, string _newPhoneNumber) {
+		ob.phoneNumber = _newPhoneNumber;
 	}
-	void show(Abonent _ob){
-		cout << "|" << setw(4) << _ob.id;
-		cout << "|" << setw(16)<< _ob.sName;
-		cout << "|" << setw(12) << _ob.phoneNumber << "|" << endl;
+	void show(Abonent& ob) {
+		cout << "|" << setw(4) << ob.id;
+		cout << "|" << setw(16) << ob.sName;
+		cout << "|" << setw(12) << ob.phoneNumber << "|" << endl;
 	}
 };
 
-void main() {
+int main() {
 	setlocale(LC_ALL, "Russian");
 	vector<Abonent> abonentArr;
 	Notebook notebook;
@@ -46,7 +49,7 @@ void main() {
 	abonentArr.push_back(Abonent(104, "Арбузов", "89184515687"));
 	for (int i = 0; i < abonentArr.size(); i++) {
 		if (abonentArr[i].id == 103) {
-			abonentArr[i] = notebook.change(abonentArr[i], "89990548400");
+			notebook.change(abonentArr[i], "89990548400");
 			break;
 		}
 	}
@@ -57,4 +60,5 @@ void main() {
 	for (int i = 0; i < abonentArr.size(); i++) {
 		notebook.show(abonentArr[i]);
 	}
+	return 0;
 }

@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2.2Lab.cpp" />
+    <ClCompile Include="4.1Lab.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6f801a60-f8fb-419a-88ef-9531bb873f5f}</ProjectGuid>
-    <RootNamespace>Labs</RootNamespace>
+    <ProjectGuid>{6075f126-2ba3-4dfb-81ed-eb9db27b9dfa}</ProjectGuid>
+    <RootNamespace>Labs20</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
