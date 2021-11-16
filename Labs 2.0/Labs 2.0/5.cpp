@@ -2,15 +2,12 @@
 
 using namespace std;
 
-void ff() {
-	cout << "Global" << endl;
-}
+
 
 class BASE {
-	friend class DERIVED;
 public: int i;
-protected: long l;
-private: double d;
+protected: long l; 
+private: double d; 
 public:
 	BASE(int _i, long _l, double _d) {
 		i = _i;
@@ -55,9 +52,6 @@ private:
 public:
 	DERIVED(float _f, int _i, long _l, double _d):BASE(_i,_l,_d) {
 		f = _f;
-		i = _i;
-		l = _l;
-		d = _d;
 	}
 	DERIVED(){
 		f = 0;
@@ -74,6 +68,10 @@ public:
 	friend class DERIVED_1;
 	friend ostream& operator<<(ostream& out, DERIVED& ob);
 };
+
+void ff() {
+	cout << "Global" << endl;
+}
 
 ostream& operator<<(ostream& out, DERIVED& ob) {
 
@@ -95,9 +93,7 @@ public:
 		l += 1;
 		ff();
 	}
-	void ff() {
-		cout << "DERIVED" << endl;
-	}
+
 };
 
 
