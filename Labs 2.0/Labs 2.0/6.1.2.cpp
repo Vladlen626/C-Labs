@@ -23,7 +23,7 @@ public:
 	
 	void Print(){
 		cout << price+"  " << weight+"  " << color+"  ";
-		cout << "Класс domestic";
+		cout << "Класс domestic ";
 	}
 
 };
@@ -31,27 +31,27 @@ public:
 class Cow: public DomesticAnimal {
 public:
 	Cow(int _price, int _weight, string _color) : DomesticAnimal(_price, _weight, _color) {}
-	void PrintCow() {
-		Print();
-		cout << "Класс Cow";
+	void Print() {
+		cout << price + "  " << weight + "  " << color + "  ";
+		cout << "Класс Cow ";
 	}
 };
 
 class Buffalo : public DomesticAnimal {
 public:
 	Buffalo(int _price, int _weight, string _color) : DomesticAnimal(_price, _weight, _color) {}
-	void PrintBuffalo() {
-		Print();
-		cout << "Класс Buffalo";
+	void Print() {
+		cout << price + "  " << weight + "  " << color + "  ";
+		cout << "Класс Buffalo ";
 	}
 };
 
 class Beefalo : public DomesticAnimal {
 public:
 	Beefalo(int _price, int _weight, string _color): DomesticAnimal(_price, _weight, _color) {}
-	void PrintBeefalo() {
-		Print();
-		cout << "Класс Buffalo";
+	void Print() {
+		cout << price + "  " << weight + "  " << color + "  ";
+		cout << "Класс Beefalo ";
 	}
 };
 
@@ -59,12 +59,8 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	Cow a(1, 1, "red");
 	Beefalo b(2, 2, "blue");
-	a.PrintCow();
-	b.PrintBeefalo();
-
-
-
-
+	a.Print();
+	b.Print();
 
 	return 0;
 }
