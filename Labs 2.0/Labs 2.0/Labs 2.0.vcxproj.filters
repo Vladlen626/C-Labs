@@ -14,19 +14,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="fig_main.cpp">
+    <ClCompile Include="7lab.cpp">
       <Filter>Лабы</Filter>
     </ClCompile>
-    <ClCompile Include="figure.cpp">
-      <Filter>Лабы</Filter>
-    </ClCompile>
-    <ClCompile Include="Triangle.cpp">
-      <Filter>Лабы</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="new_fig.h">
-      <Filter>Лабы</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
